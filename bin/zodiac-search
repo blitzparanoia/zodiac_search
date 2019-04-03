@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
-require './lib/zodiac_search'
+#require './lib/zodiac_search'
+require "bundler/setup"
+require "zodiac_search"
 
 ZodiacSearch::CLI.new.call
 
