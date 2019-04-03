@@ -16,4 +16,12 @@ class ZodiacSearch::Signs
     Pisces: The Fish (Feb 19-Mar 20)}
   end
 
+#working potential methods and info to scrape
+  sign_1 = self.new #create
+  sign_1.name = "Aries" #name of sign
+  sign_1.dates = "Mar 21-Apr 19"#date range of sign
+  sign_1.represent_by = "The Ram"#representation
+  sign_1.traits = "Coming Soon" #traits observed
+
+
 end
