@@ -1,6 +1,6 @@
 class ZodiacSearch::Signs
 
-  def self.signs
+  def self.list
     puts "Info here"
   end
 

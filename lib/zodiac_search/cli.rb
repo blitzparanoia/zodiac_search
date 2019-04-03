@@ -10,7 +10,7 @@ class ZodiacSearch::CLI
 
   def list_zodiac
     #welcome message, list of signs
-    puts "Welcome! Here is the list:"
+    @signs = ZodiacSearch::Signs.list
   end
 
   def menu
