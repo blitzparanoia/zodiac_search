@@ -35,5 +35,6 @@ potential links to scrape
 
 https://labyrinthos.co/blogs/astrology-horoscope-zodiac-signs/list-of-12-zodiac-signs-dates-meanings-symbols
 
+https://www.astrology-zodiac-signs.com/
 
 https://astrostyle.com/zodiac-signs/

@@ -1,4 +1,5 @@
 class ZodiacSearch::Signs
+  attr_accessor :name, :dates, :representation, :traits, :url
 
   def self.list
     puts %q{ Info here:
@@ -16,12 +17,17 @@ class ZodiacSearch::Signs
     Pisces: The Fish (Feb 19-Mar 20)}
   end
 
-#working potential methods and info to scrape
+#working potential methods and info to scrape, The smae format for all 12 signs
   sign_1 = self.new #create
   sign_1.name = "Aries" #name of sign
   sign_1.dates = "Mar 21-Apr 19"#date range of sign
-  sign_1.represent_by = "The Ram"#representation
+  sign_1.representation = "The Ram"#representation
   sign_1.traits = "Coming Soon" #traits observed
+  sign_1.url = ""
+
+  [sign_1]
+
+
 
 
 end
