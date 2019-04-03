@@ -10,7 +10,7 @@ class ZodiacSearch::CLI
 
   def list_zodiac
     #welcome message, list of signs
-    puts "Welcome!"
+    puts "Welcome! Here is the list:"
   end
 
   def menu
@@ -24,16 +24,16 @@ class ZodiacSearch::CLI
         puts "first"
       when "2"
         puts "second"
+      when "list"
+        list_zodiac
       else
-        puts "Try again"
+        puts "Try again, type list or exit"
       end
     end
   end
-
+#NOTE when exit is typed it also shows try again
   def goodbye
     #message for exit
     puts "Bye!"
   end
-
-
 end
