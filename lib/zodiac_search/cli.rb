@@ -6,4 +6,5 @@ class ZodiacSearch::CLI
     puts "Welcome!"
   end
 
+
 end

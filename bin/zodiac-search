@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require './lib/zodiac_search'
+
 ZodiacSearch::CLI.new.call
 
 #CLI is the class. new it is being created and call is the method
