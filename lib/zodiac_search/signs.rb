@@ -15,7 +15,7 @@ class ZodiacSearch::Signs
     Capricorn: The Goat (Dec 22-Jan 19)
     Aquarius: The Water Bearer (Jan 20-Feb 18)
     Pisces: The Fish (Feb 19-Mar 20)}
-  end
+
 
 #working potential methods and info to scrape, The smae format for all 12 signs
   sign_1 = self.new #create
@@ -25,9 +25,16 @@ class ZodiacSearch::Signs
   sign_1.traits = "Coming Soon" #traits observed
   sign_1.url = ""
 
-  [sign_1]
+  sign_2 = self.new #create
+  sign_2.name = "Aries" #name of sign
+  sign_2.dates = "Mar 21-Apr 19"#date range of sign
+  sign_2.representation = "The Ram"#representation
+  sign_2.traits = "Coming Soon" #traits observed
+  sign_2.url = ""
 
+  [sign_1, sign_2]
 
+end
 
 
 end
