@@ -27,7 +27,7 @@ user chooses a sign via number or name
 information for that sign appears:
 name
 date range
-animal representing
+representation
 notable traits
 
 

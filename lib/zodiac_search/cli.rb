@@ -1,12 +1,10 @@
 #CLI controller
-
 class ZodiacSearch::CLI
 
   def call
     welcome
     list_zodiac
-    #menu
-    #goodbye
+    menu
   end
 
   def welcome
@@ -18,32 +16,29 @@ class ZodiacSearch::CLI
     #list of signs
     ZodiacSearch::Signs.all.each.with_index(1) do |sign, i|
       puts "#{i}. #{sign.new_signs}"
-      #@signs = ZodiacSearch::Signs.list
-      #@signs.each.with_index(1) do |sign, i|
-        #puts "#{i}. #{sign.name - sign.dates}"
     end
   end
 
-  #def menu
-    #prompt for user input, insert logic here
-  #  input = nil
-  #  while input != "exit"
-  #  puts "Name a sign or pick a number:"
-  #  input = gets.strip.downcase
-#
-  #  if input.to_i > 0
-  #    the_sign = @signs[input.to_i-1]
-  #    puts "#{the_sign.new_signs}"
-  #  elsif input  == "list"
-  #    list_zodiac
-  #    else
-    #    puts "Try again, type list or exit"
-    #  end
-  #  end
-#  end
-#NOTE when exit is typed it also shows try again
+  def menu
+    input = ""
+    while input != "exit"
+      puts "Type number of sign you would like to learn more about:"
+      input = gets.strip.downcase
+        case input
+        when "list"
+          list_zodiac
+        when "exit"
+          goodbye
+          break
+        else
+          if fetch_sign = ZodiacSearch::Signs.all[input.to_i-1]
+            puts "Name: #{fetch_sign.new_signs}"
+        end
+      end
+    end
+  end
+
   def goodbye
-    #message for exit
     puts "Bye!"
   end
 
