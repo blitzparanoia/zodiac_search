@@ -38,3 +38,16 @@ https://labyrinthos.co/blogs/astrology-horoscope-zodiac-signs/list-of-12-zodiac-
 https://www.astrology-zodiac-signs.com/
 
 https://astrostyle.com/zodiac-signs/
+
+https://www.horoscopedates.com/zodiac-signs/aries/
+
+
+=begin
+doc.css("div.col-50 h2").text  SIGN
+doc.css("div.col-50 p").text DATES
+
+Traits URL & scrape (needs a method)
+doc = Nokogiri::HTML(open("https://www.astrology-zodiac-signs.com/"))
+doc = Nokogiri::HTML(open("https://labyrinthos.co/blogs/astrology-horoscope-zodiac-signs/list-of-12-zodiac-signs-dates-meanings-symbols"))
+
+=end

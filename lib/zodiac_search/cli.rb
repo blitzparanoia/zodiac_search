@@ -12,7 +12,7 @@ class ZodiacSearch::CLI
     #welcome message, list of signs
     @signs = ZodiacSearch::Signs.list
     @signs.each.with_index(1) do |sign, i|
-      puts "#{i}. #{sign.name} - #{sign.dates}"
+      puts "#{i}. #{sign.name - sign.dates}"
     end
   end
 

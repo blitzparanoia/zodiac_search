@@ -5,3 +5,4 @@ require 'open-uri'
 require_relative "./zodiac_search/version"
 require_relative "./zodiac_search/cli"
 require_relative "./zodiac_search/signs"
+require_relative "./zodiac_search/scraper"
