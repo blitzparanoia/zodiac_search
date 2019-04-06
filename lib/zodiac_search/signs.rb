@@ -1,10 +1,13 @@
 class ZodiacSearch::Signs
-  attr_accessor :new_signs, :dates
+  attr_accessor :new_signs, :signs, :dates, :links
 
   @@all = []
 
   def initialize(new_signs)
-    @new_signs = new_signs
+    new_signs.each do |attribute, info|
+      self.send("#{attribute}=", info)
+    end
+    #binding.pry
     @@all << self
   end
 
