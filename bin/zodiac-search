@@ -6,5 +6,5 @@ require "zodiac_search"
 
 ZodiacSearch::CLI.new.call
 
-#ZodiacSearch::Scraper.new.new_signs
+#ZodiacSearch::Scraper.new.info
 #CLI is the class. new it is being created and call is the method

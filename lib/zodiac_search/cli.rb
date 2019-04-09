@@ -68,7 +68,9 @@ class ZodiacSearch::CLI
           break
         else
           if fetch_sign = ZodiacSearch::Signs.all[input.to_i-1]
-            puts "Name: #{fetch_sign.signs} \nDate Range:#{fetch_sign.dates}"
+            binding.pry
+            #puts "Name: #{fetch_sign.signs} \nDate Range:#{fetch_sign.dates} \n"
+            ZodiacSearch::Scraper.scrape_sign(fetch_sign)
           else
             puts "Please enter a number between 1 and 12."
         end
