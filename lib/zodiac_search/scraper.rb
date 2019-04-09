@@ -14,15 +14,13 @@ class ZodiacSearch::Scraper
     end
 
     def self.scrape_sign(sign_page)
-      binding.pry
-
-
+      details = Nokogiri::HTML(open(sign_page.links))
+      #binding.pry
+      details.css("p")[1,2].text
 
     end
 
-
   end
-
 
 =begin
 scrape each link from the main page and extract the following from the linked page
