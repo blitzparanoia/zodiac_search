@@ -21,10 +21,28 @@ class ZodiacSearch::Scraper
         info_two = details.css("p")[2].text
 
         information.push(info_one, info_two)
-        puts information
+        puts information unless sign_page.signs == "Aquarius"
+
+        if sign_page.signs == "Aquarius"
+          #binding.pry
+          info_three = details.css("p")[0].text.gsub(/\t/, "")
+          info_four = details.css("p")[1].text.gsub(/\t/, "")
+
+          2.times do
+            information.slice!(0)
+          end
+
+          information.push(info_three, info_four)
+          puts information
+
+
+        end
+
+
+        end
       end
 
-end
+#if sign_page.signs = aquaires  use theses links
 
       #detail = details.css("p")[1].text
       #detail_extra = details.css("p")[2].text

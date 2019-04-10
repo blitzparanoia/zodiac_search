@@ -71,7 +71,8 @@ class ZodiacSearch::CLI
             puts "Name: #{fetch_sign.signs}\nDate Range: #{fetch_sign.dates}"
             #binding.pry
             ZodiacSearch::Scraper.scrape_sign(fetch_sign)
-
+            elsif
+              ZodiacSearch::Scraper.scrape_sign(fetch_sign.signs == "Aquarius")
           else
             puts "Please enter a number between 1 and 12."
         end
