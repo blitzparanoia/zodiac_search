@@ -19,8 +19,7 @@ Or install it yourself as:
     $ gem install zodiac_search
 
 ## Usage
-
-
+Type `$ zodiac_search` and follow the prompts.
 
 ## Development
 
