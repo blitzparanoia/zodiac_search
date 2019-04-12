@@ -8,7 +8,7 @@ class ZodiacSearch::CLI
   end
 
   def welcome
-    puts "Hello"
+    puts "Welcome!\n"
     ZodiacSearch::Scraper.new.new_signs
   end
 
@@ -20,7 +20,7 @@ class ZodiacSearch::CLI
   end
 
   def help
-    puts "Heard you needed help. Here are the options: \nlist \nexit \neaster egg"
+    puts "\nHeard you needed help. Here are the options: \nlist \neaster egg \nexit"
   end
 
   def easter_egg
@@ -52,35 +52,39 @@ class ZodiacSearch::CLI
     end
 
   def menu
-    input = ""
-    while input != "exit"
-      puts "\nType number of sign you would like to learn more about:"
-      input = gets.strip.downcase
-        case input
-        when "help"
-          help
-        when "list"
-          list_zodiac
-        when "easter egg"
-          easter_egg
-        when "exit"
-          goodbye
-          break
-        else
-          if fetch_sign = ZodiacSearch::Signs.all[input.to_i-1]
-            puts "Name: #{fetch_sign.signs}\nDate Range: #{fetch_sign.dates}"
-            #binding.pry
-            ZodiacSearch::Scraper.scrape_sign(fetch_sign)
-            elsif
+      input = nil
+
+      while input != "exit"
+
+        puts "\nType number of sign you would like to learn more about:"
+
+        input = gets.strip.downcase
+
+          if input == "list"
+            list_zodiac
+          elsif input == "help"
+            help
+          elsif input == "easter egg"
+            easter_egg
+          elsif input == "exit"
+            goodbye
+          elsif
+             input.to_i.between?(1,12)
+
+             fetch_sign = ZodiacSearch::Signs.all[input.to_i - 1]
+              puts "Name: #{fetch_sign.signs}\nDate Range: #{fetch_sign.dates}"
+
+              ZodiacSearch::Scraper.scrape_sign(fetch_sign)
+          elsif
+            input.to_i == 11
               ZodiacSearch::Scraper.scrape_sign(fetch_sign.signs == "Aquarius")
           else
             puts "Please enter a number between 1 and 12."
+          end
         end
       end
-    end
+
+    def goodbye
+      puts "Have a great day!"
+
   end
-
-  def goodbye
-    puts "Have a great day!"
-
-end
